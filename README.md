@@ -1,2 +1,2 @@
-# Est_posgrado25
+# Estádistica posgrado 25
 Estadística en la Investigación Científica
