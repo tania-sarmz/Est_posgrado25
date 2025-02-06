@@ -59,5 +59,36 @@ celular + Celular #0
 CELULAR - celular #7700
 
 
+# Obtener ayuda -----------------------------------------------------------
+
+#Documentación acerca de la función abs
+help(abs)
+?abs
+
+#Documentación acerca de la función mean
+help (mean)
+?mean
+
+#buscar absolute 
+help.search("absolute")
+
+#Alternativamente
+??absolute
+
+# Autoevaluación ----------------------------------------------------------
+
+gastos <- c(celular, transporte, comestibles, gimnasio, alquiler, otros)
+gastos
+
+barplot (gastos)
+
+sort(gastos)
+
+decreciente <- sort.default(gastos, decreasing = TRUE)
+decreciente
+
+barplot(decreciente)
+
+barplot(decreciente, width = 1, names.arg = decreciente)
 
 
