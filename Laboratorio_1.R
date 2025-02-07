@@ -104,50 +104,74 @@ barplot(decreciente, width = 1, names.arg = decreciente)
 ## Dirección de casa. *Cualitativa simple*
 ## Número de télefono. *Cualitativa nominal*
 ## Área principal de estudio. *Cuantitativa continua*
-## Grado de año universitario: primer año, segundo año, tercer año, último año.* Cualitativa ordinal*
-## Puntaje en la prueba de mitad de período (basado en 100 puntos posibles). *Cuantitativa continua*
-## Calificación general: A, B, C, D, F. *Cualitativa ordinal*
-## Tiempo (en minutos) para completar la prueba final de MCF 202.*Cuantitativa discreta*
-## Numero de hermanos. *Cuantitativa discreta*
+## Grado de año universitario: primer año, segundo año, tercer año, último año.
+## * Cualitativa ordinal*
+## Puntaje en la prueba de mitad de período (basado en 100 puntos posibles). 
+## *Cuantitativa continua*
+## Calificación general: A, B, C, D, F. 
+## *Cualitativa ordinal*
+## Tiempo (en minutos) para completar la prueba final de MCF 202.
+## *Cuantitativa discreta*
+## Numero de hermanos. 
+## *Cuantitativa discreta*
 
 # **Problema 2**
-# Ejemplos de variables cuantitativas: Biomasa (kg), Número de petalos de una flor, Altura de árboles (m), Precipitación media anual (mm). 
-# Ejemplos de variables catégoricas: Rangos de pendientes (%), estado civil, calificaciones asignadas por letras, sexo, religión. 
+# Ejemplos de variables cuantitativas: Biomasa (kg), Número de petalos de una 
+# flor, Altura de árboles (m), Precipitación media anual (mm). 
+# Ejemplos de variables catégoricas: Rangos de pendientes (%), estado civil, 
+# calificaciones asignadas por letras, sexo, religión. 
 
 
 # **Problema 3** 
-# Los valores númericos asignados a formas electrónicas de expresar opiniones personales son variables cualitativas nominales, 
-# ya que describe una caracteristica y no se puede medir con números, en este caso solamente se les asigno un número para describirlas.
+# Los valores númericos asignados a formas electrónicas de expresar opiniones 
+# personales son variables cualitativas nominales, 
+# ya que describe una caracteristica y no se puede medir con números, en este 
+# caso solamente se les asigno un número para describirlas.
 
 # **Problema 4**
-# Determinación de (1)los individuos de interés (el grupo o grupos que se están estudiando), (2) la (s) variable (s) 
-# (la característica sobre la que recopilaríamo datos) y (3) si cada variable es categórico o cuantitativo.
+# Determinación de (1)los individuos de interés (el grupo o grupos que se están 
+# estudiando), (2) la (s) variable (s) 
+# (la característica sobre la que recopilaríamo datos) y (3) si cada variable 
+# es categórico o cuantitativo.
 
-## ¿Cuál es la cantidad promedio de horas que los estudiantes de universidades públicas trabajan cada semana?
+## ¿Cuál es la cantidad promedio de horas que los estudiantes de universidades 
+## públicas trabajan cada semana?
 ### 1) Individuos de interés = Estudiantes de universidades públicas.
-### 2) Variables = Cantidad promedio de horas que los estudiantes trabajan a la semana. 
+### 2) Variables = Cantidad promedio de horas que los estudiantes trabajan a la 
+## semana. 
 ### 3) Tipo de variable = Cuantitativa. 
 
-## ¿Qué proporción de todos los estudiantes universitarios de México están inscritos en una universidad pública?
-### 1) Individuos de interés = Estudiantes de universidades de México inscritos en una universidad pública.
-### 2) Variables = Proporción de estudiantes universitarios de México están inscritos en una universidad pública, 
+## ¿Qué proporción de todos los estudiantes universitarios de México están 
+## inscritos en una universidad pública?
+### 1) Individuos de interés = Estudiantes de universidades de México inscritos 
+### en una universidad pública.
+### 2) Variables = Proporción de estudiantes universitarios de México están 
+### inscritos en una universidad pública, 
 ###    con respecto al total de estudiante en México. 
 ### 3) Tipo de variable = Catégorica. 
 
-## En los universidades públicas, ¿las estudiantes femeninas tienen un promedio de CENEVAL más alto que los estudiantes varones?
-### 1) Individuos de interés = Estudiantes femeninas de universidades públicas y estudiantes varones de universidades públicas.
-### 2) Variables = Promedio de calificación CENEVAL de estudiantes femeninas y Promedio de calificación de estudiantes varones. 
+## En los universidades públicas, ¿las estudiantes femeninas tienen un promedio 
+## de CENEVAL más alto que los estudiantes varones?
+### 1) Individuos de interés = Estudiantes femeninas de universidades públicas y
+### estudiantes varones de universidades públicas.
+### 2) Variables = Promedio de calificación CENEVAL de estudiantes femeninas y 
+### Promedio de calificación de estudiantes varones. 
 ### 3) Tipo de variable = Cuantitativa. 
 
-## ¿Es más probable que los atletas universitarios reciban asesoramiento académico que los atletas no universitarios?
-### 1) Individuos de interés = Atletas universitarios y estudiantes no universitarios.
+## ¿Es más probable que los atletas universitarios reciban asesoramiento 
+## académico que los atletas no universitarios?
+### 1) Individuos de interés = Atletas universitarios y estudiantes no 
+### universitarios.
 ### 2) Variables = Si o no recibe asesoramiento académico. 
 ### 3) Tipo de variable = Catégorica. 
 
-## Si reuniéramos datos para responder a las preguntas de la investigación anterior, ¿qué datos podrían analizarse mediante un histograma? 
+## Si reuniéramos datos para responder a las preguntas de la investigación 
+## anterior, ¿qué datos podrían analizarse mediante un histograma? 
 ## ¿Cómo lo sabes?.
-### 1) Individuos de interés = Atletas universitarios y estudiantes no universitarios.
-### 2) Variables = Cantidad de atletas universitarios que reciben asesoramiento, cantidad de atletas universitarios que no reciben asesoramiento, 
-### cantidad de estudiante no universitarios que reciben asesoramiento y cantidad de estudiantes no universitarios que no reciben asesoramiento.
+### 1) Individuos de interés = Atletas universitarios y estudiantes no 
+### universitarios.
+### 2) Variables = Cantidad de atletas universitarios que reciben asesoramiento,
+### cantidad de atletas universitarios que no reciben asesoramiento, 
+### cantidad de estudiante no universitarios que reciben asesoramiento y 
+### cantidad de estudiantes no universitarios que no reciben asesoramiento.
 ### 3) Tipo de variable = Cuantitativa. 
-
