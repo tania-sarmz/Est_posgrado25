@@ -30,4 +30,3 @@ vivero$Tratamiento <- as.factor(vivero$Tratamiento)
 
 boxplot(vivero$IE ~ vivero$Tratamiento, col = "indianred", 
         xlab = "Tratamientos", ylab = "IE")
-
