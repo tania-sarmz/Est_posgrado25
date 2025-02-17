@@ -26,3 +26,7 @@ t.test(vivero$IE ~ vivero$Tratamiento)
 #Pruebas dependientes
 t.test(vivero$IE ~ vivero$Tratamiento, paired =T)
 
+#Prueba de 1 muestra
+mean(vivero$IE)
+t.test(vivero$IE, mu=0.85)
+t.test(vivero$IE, mu=0.90)
