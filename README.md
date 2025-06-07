@@ -3,7 +3,8 @@
 
 Contenido del curso (8 semanas 20/01/2025 - 10/03/2025) 
 
-![contribuciones](https://github.com/user-attachments/assets/1a394a69-0a4d-49b5-bbfb-fd920cabeef0)
+![contribuciones](https://github.com/user-attachments/assets/7de84890-b7cb-40bf-9e82-16c279262a01)
+
 ![contribuciones2](https://github.com/user-attachments/assets/fb41b364-bdb0-4106-89ea-35ae43d360e4)
 
 ## Carpeta y Scripts
