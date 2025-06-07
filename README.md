@@ -3,6 +3,8 @@
 
 Contenido del curso (8 semanas 20/01/2025 - 10/03/2025) 
 
+![contribuciones](https://github.com/user-attachments/assets/1a394a69-0a4d-49b5-bbfb-fd920cabeef0)
+
 ## Clase 1: 20.01.2025 (Creación del repositorio *Github*)
 
 :white_check_mark: Lenguaje *Markdown*
