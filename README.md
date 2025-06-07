@@ -291,7 +291,98 @@ gráfica indica por factores/ tratamientos)
 - Si la media teorética fuese 0.90
 - Entonces p es menor a 0.025, por lo que las medias ya NO son estadísticamente iguales.
 
-## 
+## Clase 5: 24.02.2025 (Prueba de varianzas)
+:white_check_mark: Pruebas de varianza (tres tratamientos o más diferentes)
+- Análisis de varianzas para tres tratamientos o más
+- Revisar distribución normal
+- Revisar homogeneidad de varianzas
+- Hay varianza entre los grupos (varianza entre niveles de factores, tratamientos)
+- Hay varianza dentro de los grupos (varianza entre cada bloque, observaciones, grupos de individuos)
+- Si se encuentra diferencia en por lo menos una varianza, se aplica una diferencia de medias (prueba de Tukey la más común, solo se aplica a experimentos balanceados).
+- Diseño de experimentos balanceados, mismo número de observaciones por bloque.
+- Cuando no hay experimentos balanceados, se pueden aplicar correcciones, como la de Bon Ferroni (prueba de medias diferente a Tukey).
+- Observaciones, número de individuos en cada bloque.
+- Repeticiones, número de veces que se repiten un número de observaciones por los bloques en total. 
+
+:white_check_mark: Niveles de factor
+- Niveles de factor, interacción entre variables, se refiere a las interacciones de factores que interfieren en las variables de estudios. Por ejemplo estoy midiendo altura con respecto a un tratamiento de riego, pero tomo en cuenta como le afectan factores como el clima o la temperatura.
+    - Dos vías
+    - Tres vías
+- ¿Qué son los factores y los niveles de factor?
+  - Utilice factores durante un experimento para determinar su efecto sobre la variable de respuesta. Los factores solo pueden asumir un número limitado de valores posibles, conocidos como niveles de los factores. Los factores pueden ser una variable categórica o estar basados en una variable continua, pero solo use unos pocos valores controlados en el experimento.
+- Ejemplo de niveles de factor
+  - Por ejemplo, usted estudia los factores que podrían afectar la resistencia del plástico durante el proceso de manufactura. Decide incluir Aditivo y Temperatura en su experimento. El aditivo es una variable categórica. Solo puede ser tipo A o tipo B. En cambio, la temperatura es una variable continua, pero aquí es un factor porque en el experimento solo se prueban tres valores de configuración de temperatura de 100C, 150C y 200C.
+
+:white_check_mark: Ejercicio con datos para ANOVA
+- Instalar paquetería: blob:https://lite.evernote.com/f5b9a6f8-27fd-49cc-9ddd-0ec0098407c7
+- Correr la librería con source data y la ruta de la librería
+- Visualizar en un Boxplot: Se observan los factores de tratamiento, niveles de tratamiento. En este caso niveles de sitio son 4:  Chinatu, Laguna, Trinidad y Tule
+- Prueba de normalidad: Se observa un p-value menor a 0.05; entonces no son normales.
+- Se comprueba en un histograma: Hay un sesgo a la derecha, si fuesen normales se concentrarían en los diámetros 30 y 40.
+
+:white_check_mark: Ejercicio de normalidad
+- A mayor cantidad de datos, más nos acercamos a la normalidad
+- Se observa un p-value mayor a 0.05; entonces si hay homogeneidad de varianzas
+- Ante datos no normales y homogeneidad de varianzas
+  - Es común que en recursos naturales no haya suficientes observaciones, por lo que no hay normalidad de datos.
+  - Una solución puede ser la transformación de los datos (se reducen):
+      - Log (x + 1)
+      - √x
+      - √x – 0.5
+:white_check_mark: Transformación de datos desde R
+- Se crea una nueva columna, desde R
+- Se le asigna la función de log10 a los datos
+- También se pueden redondear los datos para una mejor representación de normalidad
+- Se correo nuevamente Shapiro Test, y ya se observa una normalidad de los datos.
+
+:white_check_mark: Para limpiar el sesgo en los datos 
+- Se instalo librería e1071, desde repmis
+- La función skewness, me indica si se redujo el sesgo
+   - Arriba de 1, totalmente sesgado
+   - Entre 0.5  a 1 moderamente sesgado
+   - Menos de 0.5, tendientes a 0, no tienen sesgo
+- Tomar en cuenta la media ideal del grupo (media)
+  - Hacia la derecha
+  - Hacia la izquierda
+
+:white_check_mark: Otra manera de transformación de datos
+- Mediante la aplicación de raíz cuadrada a los datos
+- Con ello ya se alcanza la normalidad de los datos
+- También se comprobó homogeneidad de varianzas
+-  Mediante la aplicación de raíz cuadrada a los datos
+-  Con ello ya se alcanza la normalidad de los datos
+-  También se comprobó homogeneidad de varianzas []]
+ 
+:white_check_mark: Para quitar “limpiar tu base” quitando columnas
+- Se utilizan los corchetes y mediante coma y un menos se indica que columna de mi base quitar [,-#]
+
+:white_check_mark: Análisis de varianza – Tabla de ANOVA
+- Cuando el CM tratamiento es mayor que el CM error, hay diferencias, de lo contrario no hay diferencias.
+- Si el error es mayor, probablemente tengo una fuente de variación que esta alterando mis datos.
+- Correr objeto dap.anova
+- Mas resumido es con la función summary, que te da el resumen de cualquier objeto.
+- Se corrobora que hay diferencias significativas mediante:
+  - Valor de P
+  - La probabilidad de F
+- Como ya se comprobó diferencias significativas, ahora se debe comprobar la comparación entre variables
+- Se grafican los datos de la prueba de Tukey 
+
+:white_check_mark: Para ir colocando textos en la grafica boxplot 
+- Función de text, se pone primero la posición de la variable y luego la altura a la que queremos que aparezca el texto de acuerdo a la altura de la gráfica.
+- También se pueden poner puntos decimales. Por ejemplo text (1,7.7, “a”)
+- Nota: esta función se va poniendo sobre capas. 
+
+:white_check_mark: Para ir colocando textos en los ejes de las gráficas 
+- Función de mtext, se pone primero el texto deseado entre comillas, y después en que posición de la gráfica).
+- Siempre se puede volver a resetear, utilizando nuevamente la función de boxplot
+- Buscar librería para adjudicar letras de diferencias significativas. Mult, four letters
+
+
+
+
+
+
+
 
 
 
