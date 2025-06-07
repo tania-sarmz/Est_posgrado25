@@ -248,22 +248,53 @@ gráfica indica por factores/ tratamientos)
   - Dos colas: Solamente diferencias significativas entre dos grupos de datos independientes
       - Se le especifica en Rstudio, si se desea que sea de dos colas; aunque lo coloca por default
 
- :white_check_mark:  Para hacer prueba de t
-   - Función que se utiliza: t.test
-   - Observación de los datos:
-       - Aunque aparentemente la media es diferente, ¿como lo se estadísticamente?
-       - ¿Es significativa o no es significativa?
-       - Se la aplica la normalidad al índice de esbeltez
-   - Prueba de Shapiro (búsqueda de la normalidad)
-       - Ho = son normales
-       - H1 = no son normales
-       - Nuestra orientación es conforme al p-value
-       - Prueba de normalidad se realiza con una prueba de una cola.   
-   - Prueba de Shapiro (búsqueda de la normalidad)
-       - Ho = son normales
-       - H1 = no son normales
-       - Nuestra orientación es conforme al p-value
-       - Prueba de normalidad se realiza con una prueba de una cola.
+:white_check_mark:  Para hacer prueba de t
+  - Función que se utiliza: t.test
+  - Observación de los datos:
+      - Aunque aparentemente la media es diferente, ¿como lo se estadísticamente?
+      - ¿Es significativa o no es significativa?
+      - Se la aplica la normalidad al índice de esbeltez
+  - Prueba de Shapiro (búsqueda de la normalidad)
+      - Ho = son normales
+      - H1 = no son normales
+      - Nuestra orientación es conforme al p-value
+      - Prueba de normalidad se realiza con una prueba de una cola.   
+  - Restricciones R en las bases de datos
+      - == igual
+      - != diferente a
+      - < mayor
+      - > menor
+      - <= mayor o igual a
+      - > = menor o igual a
+:white_check_mark:  Función subset, para hacer un subconjunto
+    -  Es para extraer una parte específica de la base de datos
+    -  Como un tipo filtro en Excel
+:white_check_mark:  Comparación de varianzas (homogeneidad de varianzas
+   - Esta ligeramente “0.003” mayor, por lo que se acepta la hipótesis nula, cumple homogeneidad de varianzas.
+   - Si hubiese salido 0.049 es menor, por lo que se acepta la hipótesis alternativa, que no cumple homogeneidad de varianzas
+   - var. equal, me indica que mis varianzas son iguales (normales). Si no se coloca te “proyecta” los grados de libertad y el valor de p cambia ligeramente, lo cual puede afectar cuando las diferencias no son tan marcadas.
+   - t= valor estimado de la prueba = -2.9813
+   - df = grados de libertad = 40
+   - p-value = valor de p = 0.004868, es menor a 0.025, por lo que se acepta la hipótesis alternativa, hay diferencias significativas. En este caso, es MUY marcada la diferencia menor a 0.025, por lo que no es estrictamente necesario verificar distribución de 1 cola.
+
+:white_check_mark:  Prueba de t (suponiendo que los datos son dependientes)
+- Se utiliza la función paired, para indicar que son datos dependientes.
+- Cambian los grados de libertad a 21 -1, ya que son 21 individuos tomados en dos momentos diferentes.
+- El valor de p es menor a 0.025, por lo que si hay diferencias significativas. Lo cual en un ejemplo hipotético nos dice que la acción tomada en un momento diferente, si hace una diferencia en el “índice de esbeltez”. 
+
+:white_check_mark:  Prueba de t (suponiendo que los datos son de 1 muestra)
+- Se establece una media teorética (mu = ), por ejemplo “CONAFOR establece un índice de esbeltez de 0.85”
+- De manera absoluta el promedio de IE es de 0.83, pero hay que probarlo ahora estadísticamente.
+- El valor de p es mayor a 0.025, por lo que las medias son iguales; no hay diferencias significativas. 
+
+:white_check_mark: Prueba de t (suponiendo que los datos son de 1 muestra)
+- Si la media teorética fuese 0.90
+- Entonces p es menor a 0.025, por lo que las medias ya NO son estadísticamente iguales.
+
+## 
+
+
+
 
 
 
