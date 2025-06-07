@@ -1,5 +1,5 @@
-#Tania Isela Sarmiento Muñoz
-#Matricula: 1503831
+# Tania Isela Sarmiento Muñoz
+# Matricula: 1503831
 # Estádistica posgrado 25
 + Estadística en la Investigación Científica
 
