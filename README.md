@@ -377,6 +377,103 @@ gráfica indica por factores/ tratamientos)
 - Siempre se puede volver a resetear, utilizando nuevamente la función de boxplot
 - Buscar librería para adjudicar letras de diferencias significativas. Mult, four letters
 
+## Clase 6: 03.03.2025 (Pruebas de t de 1 y 2 colas)
+:white_check_mark: Ejemplo real
+- Se ingresan los datos
+- Con la función length se comprueba el número de datos total
+- El promedio se comprueba con mean
+- Se grafica con función plot ((density)), para ver los datos en una curva de distribución.
+- Aparentemente se distribuye normal, sin embargo la media baja del peso de 80 kg
+
+:white_check_mark: Se coloca propiedades a la gráfica
+- Se agrega línea de media mediante función abline, que es una mascara directa en la gráfica. V es vertical, lwd es ancho y lty para modificar como es la línea, en este caso 2 es descontinua.
+- Se agrega línea de media teorética mediante función abline
+- De manera visual se nota que la media observada es menor a la media teorética, sugiriendo la hipótesis alternativa. Que los costales tienen contenido menos peso de lo que viene en los productos. Sugiere un defecto en los procesos de calidad de llenado de los costales. 
+
+:white_check_mark: Ahora en un histograma
+- En un histograma nos interesaría más una línea horizontal de referencia.
+
+:white_check_mark: Prueba de t de 1 cola
+- Ahora se corre la prueba de t, con mu teorética de 80 y referencia de menos (“less“ condiciona prueba de 1 cola).
+- Con el valor de p = 0.01132, valor menor a 0.05, por lo que se acepta la hipótesis alternativa, que la media observada es menor a la media de 80 kg. Por lo que estadísticamente si hay diferencias significativas entre el peso de los costales y la declaración del peso de los costales en su empaque.
+- Si la corremos sin condicionar “less“, sería una prueba de dos colas, por lo que el valor de referencia de p se toma como 0.025.
+- Continua habiendo diferencias significativas, ya que p-value es de 0.02264, sin embargo no tomo de referencia si el valor que busca es menos o más a la media teorética de referencia, sólo que hay diferencias. 
+
+:white_check_mark: Prueba de t de 2 colas
+- El grupo 2 duerme en promedio 20 minutos más, a diferencia del primer grupo.
+- No hay diferencia significativa entre ambos grupos, más de 0.025
+
+:white_check_mark: Ejemplo de calidad del aire
+- Si el mes de mayo, es más caliente o más frío que la temperatura promedio (una muestra, con respecto a una media teorética).
+- La condiciono si es una temperatura menor, con la función alternative = “l”.
+- Se confirmo que la temperatura de mayo es menor, ya que p-value es menor a 0.05
+- No hay varianza entre mayo y el resto de los meses de comparación
+- Ahora veré si esa variación esta relacionada a otro factor (viento, ozono, etc.).
+- Lo puedo hacer mediante una regresión lineal.
+- Ozono no se observa variables
+- Ver si el viento es variable de acuerdo a la varianza
+- Aparentemente hay una diferencia significativa entre los meses, pero el grado de libertad es sólo uno
+- La variable mes no me la esta reconociendo como factor
+- Corrección como factor, se nota en los grados de libertad
+- Se confirma que hay diferencias significativas.
+- Como son diferentes hay que hacer prueba de Tukey.
+- Sólo hay diferencias entre mayo con julio y mayo con agosto. 
+
+:white_check_mark: Correlación de Pearson
+- Correlación positiva, a medida que aumenta x aumenta y.
+- Correlación negativa, a medida que disminuye x disminuye y.
+- O bien, no hay correlación entre las dos variables.
+- Va de -1 hasta 1
+- En este caso hay una correlación negativa y es significativo, sin embargo es baja la influencia.
+- Osea que el Viento influye negativamente en la temperatura, pero no es tan marcada
+- Ahora sacare una grafica de puntos. Pch se refiere al tipo de carácter de los puntos.
+- Se observa una tendencia, pero no tan clara.
+- Se determina la lineal de regresión con r
+- R2 explica el porcentaje que tanto una variable esta correlacionada con la otra.
+- Se determina la lineal de regresión con r (coeficiente de relación), en este caso r = 0.45
+- R2 (coeficiente de determinación) explica el porcentaje que tanto una variable esta correlacionada con la otra; en este caso r2 = 0.2025; o sea un 20%. Se tendría que acerca a 1 o -1 para una mayor tendencia de correlación en los datos. 
+
+## Clase 7: 10.03.2025 (Regresión lineal)
+
+:white_check_mark: Regresión lineal
+- Regresión lineal (r2): conocer el comportamiento de las variables, como puede variar una variable con respecto a la otra. Se usa coeficiente de r2 ajustada (en que porcentaje el índice de la variable x predice la variable y).
+- Función de regresión lineal. lm (y x), siempre se pone la variable y (dependiente) primero, ya que es la que se ve descrita por la variable x (independiente).
+- Nube de puntos: correlaciona dos variables, desde el fundamento de que para cada valor de x (independiente) existe un valor en y (dependiente), o sea pares de observaciones.
+- Línea de tendencia central: Mide el ajuste en la nube de puntos. Parte de la relación y´= alfa + beta (x). No sirve para predecir, sólo describir.
+- Alfa y beta son dos condicionantes de similitud, son dos valores constantes para obtener la y´.
+- Alfa: Valor que tiene y cuando x vale 0
+- Beta: Pendiente que indica cual es el valor que incrementa y cuando x incrementa una unidad. 
+
+:white_check_mark: Ejercicio de correlación
+- Importar datos: La variable eruptions es la duración de chorro de agua en cada erupción, y la variable waiting es el tiempo de espera entre cada erupción.
+- Se gráfican los datos en donde visualmente si se observa un correlación. Ahora se comprueba numéricamente.
+- Cor solo valor de correlación
+- Cor.test, para ver no solamente el valor de cor, sino para conocer si es significativo o no.
+- Se observa que existe una fuerte correlación entre ambas variables y de manera positiva, pues el valor se aproxima bastante al valor de 1.
+
+:white_check_mark: Modelo de regresión lineal, para determinar la línea de tendencia central. 
+- Se guarda con el objeto g.lm
+- Al correr la regresión de g.lm se observa que cuando el valor de x es 0, y intercepta en el valor de 33.47, sin embargo no se observa algún valor similar a esta situación
+- Por ello, se comprueba por medio de una matriz con la función de summary, en donde se observa la significancia de los valores de alfa (intercept, en este caso 33.47) y beta (geysereruptions, en este caso ).
+- Los datos deben pasar por el centro, se debe tener en cuenta cuando hay huecos entre datos.
+- Las líneas de tendencia central tienen una sumatoria de las diferencias, las cuales deben acercarse a 0. Cuando no sucede esto no esta en el ajuste correcto.
+- Para asegurarse que esa línea pase por el centro, usar la función abline
+- Se corrige la relación de la variable independiente y dependiente
+- Ahora si se observa coherencia en el valor de alfa (-1.87), acorde a los datos
+- La r2 esta indicando que el ajuste es del 81.08%, con esa probabilidad y esta descrito por x. 
+
+:white_check_mark: Análisis de varianza de la regresión, mediante un modelo de anova 
+- Análisis de varianza de la regresión, mediante un modelo de anova (no para buscar diferencias en comparación de medias), para que describa la varianza. Para conocer como es la variación, rectificar que el modelo que estoy utilizando funciona. Te resume los valores que fuimos sacando por independientes. Nos interesa observar la varianza (0.247) y la significancia.
+- Aquí se observan los grados de libertad en 270, la sumatoria de la diferencias al cuadrado es 66.56
+
+
+
+
+
+
+
+
+
 
 
 
